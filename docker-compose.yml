@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  chromadb:
+    image: ghcr.io/chroma-core/chroma:latest
+    volumes:
+      - ./chromadb_data:/chroma/chroma
+    ports:
+      - "8000:8000"
+volumes:
+  chromadb_data:
+    driver: local
